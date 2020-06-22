@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "GenerarPedido";
+    Layout = "~/Views/Shared/_LayoutAlmacen.cshtml";
+}
+
+<h2>Generar Pedido</h2>
+<div class="container">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+        <h3>
+            <label for="pedido">Pedido Numero </label> 6
+            <br />
+            <label for="pedido">Presupuesto  </label> 20000
+            <br />
+            <label for="pedido">Fecha de Realizacion  </label> 22/06/2020
+        </h3>
+    </div>
+    <div class="col-md-4">
+        <h3>
+            <label for="pedido">Proveedor </label> Phizer
+            <br />
+            <label for="pedido">Diferencia </label> 1465
+            <br />
+            <label for="pedido">Fecha de Entrega </label> 30/06/2020
+        </h3>
+    </div>
+
+</div>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr style="background-color: #E2C3FC">
+            <th>id</th>
+            <th>proveedor</th>
+            <th>Nombre</th>
+            <th>Precio Compra</th>
+            <th>cantidad</th>
+            <th>subtotal</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>2</td>
+            <td>Phizer</td>
+            <td>CEFALEXINA</td>
+            <td>512</td>
+            <td>8</td>
+            <td>4096</td>
+            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Phizer</td>
+            <td>AMAXOLINA</td>
+            <td>243</td>
+            <td>5</td>
+            <td>1215</td>
+           
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Phizer</td>
+            <td>OMEPRAZOL</td>
+            <td>352</td>
+            <td>12</td>
+            <td>4224</td>   
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Phizer</td>
+            <td>NAPROXENO</td>
+            <td>450</td>
+            <td>20</td>
+            <td>9000</td>         
+        </tr>
+
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th> </th>
+            <th>TOTAL </th>
+            <th>18535</th>
+            
+        </tr>
+    </tfoot>
+</table>
+
+<center>
+    <button type="button" class="btn btn-success">@Html.ActionLink("Confirmar Pedido", "Pedidos", "Pedidos")</button>
+    <button type="button" class="btn btn-danger">@Html.ActionLink("Cancelar", "ProductoExistente", "ProductoExistencias")</button>
+
+
+</center>

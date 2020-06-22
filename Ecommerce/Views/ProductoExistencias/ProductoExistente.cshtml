@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "ProductoExistente";
+    Layout = "~/Views/Shared/_LayoutAlmacen.cshtml";
+}
+
+<h2>Productos Bajo Stock</h2>
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr style="background-color: #E2C3FC">
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio Compra</th>
+            <th>Precio Venta</th>
+
+            <th>cantidad total</th>
+            <th>cantidad stock</th>
+
+            <th>proveedor</th>
+            <th>categoria</th>
+            <th>Añadir a Pedido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>BEZAFIBRATO</td>
+            <td>medicamento en capsulas</td>
+            <td>521</td>
+            <td>618</td>
+
+            <td>20</td>
+            <td>15</td>
+
+            <td>Similares</td>
+            <td>Antialergico</td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Agregado a Pedido</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CEFALEXINA</td>
+            <td>medicamento en capsulas 500mg</td>
+            <td>452</td>
+            <td>512</td>
+
+            <td>14</td>
+            <td>10</td>
+
+            <td>Phizer</td>
+            <td>Antialergico</td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Agregado a Pedido</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>AMAXOLINA</td>
+            <td>medicamento en capsulas 50mg</td>
+            <td>125</td>
+            <td>243</td>
+
+            <td>10</td>
+            <td>12</td>
+
+            <td>Phizer</td>
+            <td>Analgesico</td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Agregado a Pedido</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>OMEPRAZOL</td>
+            <td>medicamento en capsulas 20mg</td>
+            <td>214</td>
+            <td>352</td>
+
+            <td>12</td>
+            <td>10</td>
+
+            <td>Phizer</td>
+            <td>Analgesico</td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Agregado a Pedido</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>NAPROXENO</td>
+            <td>medicamento en tabletas</td>
+            <td>321</td>
+            <td>450</td>
+
+            <td>25</td>
+            <td>20</td>
+
+            <td>Phizer</td>
+            <td>Antiinflamatorio</td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Agregado a Pedido</label>
+                </div>
+            </td>
+        </tr>
+
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio Compra</th>
+            <th>Precio Venta</th>
+            <th>cantidad total</th>
+            <th>cantidad stock</th>
+            <th>proveedor</th>
+            <th>categoria</th>
+            <th>Añadir a Pedido</th>
+        </tr>
+    </tfoot>
+</table>
+<center>
+    <button type="button" class="btn btn-success">@Html.ActionLink("Nuevo Pedido", "GenerarPedido", "Pedidos")</button>
+
+
+</center>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var table = $('#example').DataTable({
+            "pageLength": 10,
+            "language": {
+                "paginate": {
+                    "previous": '‹',
+                    "next": '›',
+                },
+                "lengthMenu": "Mostrar _MENU_ registros por página",
+                "info": "Mostando _PAGE_ de _PAGES_ páginas",
+                "search": "Buscar:",
+                "infoFiltered": "(Filtrado de _MAX_ registros)",
+                "zeroRecords": "No se encontraron datos",
+                "emptyTable": "No hay datos disponibles",
+                "infoEmpty": "No existen registros sobre la consulta",
+            }
+        });
+    });
+</script>

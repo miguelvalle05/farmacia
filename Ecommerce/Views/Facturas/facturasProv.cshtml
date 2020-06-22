@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "facturasProv";
+    Layout = "~/Views/Shared/_LayoutAlmacen.cshtml";
+}
+
+<h2>Facturas</h2>
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr style="background-color: #E2C3FC">
+            <th>id Factura</th>
+            <th>fecha_Emision</th>
+            <th>fecha_Entrega</th>
+            <th>Total de Pago</th>
+            <th>Estatus</th>
+            <th>fecha_Pago</th>
+            <th>Proveedor</th>
+            <th>Id_Pedido</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>15/06/2020</td>
+            <td>15/06/2020</td>
+            <td>15000</td>
+            <td>Entregado</td>
+            <td>15/06/2020</td>
+            <td>Bayer</td>
+            <td>1001</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>05/07/2020</td>
+            <td>25/06/2020</td>
+            <td>1400</td>
+            <td>Entregado</td>
+            <td>15/08/2021</td>
+            <td>IMSS</td>
+            <td>1005</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>24/04/2020</td>
+            <td>11/06/2020</td>
+            <td>8530</td>
+            <td>Entregado</td>
+            <td>15/07/2021</td>
+            <td>RIMSA</td>
+            <td>1050</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>15/07/2019</td>
+            <td>15/06/2020</td>
+            <td>4500</td>
+            <td>Entregado</td>
+            <td>15/06/2021</td>
+            <td>Roche</td>
+            <td>1014</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>22/06/2020</td>
+            <td>27/06/2020</td>
+            <td>16931</td>
+            <td>Entregado</td>
+            <td>15/01/2021</td>
+            <td>Phizer</td>
+            <td>6</td>
+        </tr>
+
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>id Factura</th>
+            <th>fecha_Emision</th>
+            <th>fecha_Entrega</th>
+            <th>Total de Pago</th>
+            <th>Estatus</th>
+            <th>fecha_Pago</th>
+            <th>id_Proveedor</th>
+            <th>Id_Pedido</th>
+        </tr>
+    </tfoot>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var table = $('#example').DataTable({
+            fixedHeader: true
+        });
+    });
+</script>
